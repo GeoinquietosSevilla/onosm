@@ -3,6 +3,7 @@
     <head>
         <title>On OpenStreetMap</title>
         <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+        <link href='./img/favicon.ico' rel='icon' type='image/x-icon'/>
         <link rel='stylesheet' type='text/css' href='css/style.css' />
         <link rel='stylesheet' type='text/css' href='css/site.css' />
         <link rel='stylesheet' type='text/css' href='css/select2.css' />
@@ -18,77 +19,78 @@
         <div class='container pad2 margin2 col8'>
             <div class='pad2'>
                 <img src='img/osm.png' class='fl mr' alt='OpenStreetMap' />
-                <h2>On OpenStreetMap</h2>
-                <p>OpenStreetMap is an open, global map used by people around the world
-                to navigate and find local businesses.<br />
-                It's easy and free to get on the map!</p>
+                <h2>Tu negocio en OpenStreetMap</h2>
+                <p>OpenStreetMap es un mapa global y libre usado por
+                mucha gente en todo el mundo para navegar con su GPS y
+                buscar negocios en diferentes lugares. ¡Es fácil y
+                gratis aparecer en el mapa!</p>
             </div>
 
             <div class='col12 on-1 steps clearfix'>
                 <div class='col4 center pad1 step-1'>
-                    <a href='#location'>Location</a>
+                    <a href='#location'>Ubicación</a>
                 </div>
                 <div class='col4 center pad1 step-2'>
-                    <a>Details</a>
+                    <a>Detalles</a>
                 </div>
                 <div class='col4 center pad1 step-3'>
-                    <strong>Done</strong>
+                    <strong>Hecho</strong>
                 </div>
             </div>
 
             <div class='col12' id='address-step'>
                 <div class='center pad2'>
-                    <span id='instructions'>Start by telling us where your business is located.</span>
+                    <span id='instructions'>Comienza diciéndonos dónde está situado tu negocio.</span>
                 </div>
                 <div class='col12'>
                     <div class='pad1'>
                         <form id='find'>
                             <input class='col8' id='address' placeholder='501 West Main Street, Alexandria, VA' />
-                            <button class='col4' id='findme'>Find Me!</button>
+                            <button class='col4' id='findme'>Buscar</button>
                         </form>
                     </div>
                     <br />
                     <br />
                     <div class='col12' id='findme-map'></div>
-                    <p id="couldnt-find" style='display: none;'>
+                    <!--<p id="couldnt-find" style='display: none;'>
                         <strong>We couldn't find your address.</strong> Try searching for your street or city without the address.
-                    </p>
+                    </p>-->
                 </div>
             </div>
 
             <div class='col12 hide' id='collect-data-step'>
-                <p>We found your location. Now tell us about your business.</p>
+                <p>Encontramos tu ubicación. Ahora coméntanos sobre tu negocio.</p>
                 <div class='col12'>
                     <div class='clearfix col12'>
-                        <label for='category'>Category</label>
+                        <label for='category'>Categoría</label>
                         <input id='category' data-placeholder='Pick a category...' class='col10' />
                     </div>
                     <div class='col6'>
-                        <label for='name'>Name</label>
+                        <label for='name'>Nombre</label>
                         <input id='name' type='text' placeholder='ACME Parts' />
-                        <label for='phone'>Phone Number</label>
-                        <input id='phone' type='text' placeholder='414-555-1212' />
+                        <label for='phone'>Número de Teléfono</label>
+                        <input id='phone' type='text' placeholder='+34 954 001122' />
                     </div>
                     <div>
-                        <label for='website'>Website</label>
+                        <label for='website'>Web</label>
                         <input id='website' type='text' placeholder='http://www.example.com/' />
                         <label for='twitter'>Twitter</label>
                         <input id='twitter' type='text' placeholder='@example' />
-                        <label for='opening_hours'>Hours</label>
+                        <label for='opening_hours'>Horario</label>
                         <input id='opening_hours' type='text' placeholder='Monday-Friday 10am to 8pm' />
                     </div>
-                    <button class='col12' id='collect-data-done'><h4>Done!</h4></button>
+                    <button class='col12' id='collect-data-done'><h4>Hecho!</h4></button>
                 </div>
             </div>
 
             <div class='col12 pad2 hide' id='confirm-step'>
                 <p>
-                    <strong>Thanks!</strong> An OpenStreetMap volunteer will add your data to the map soon.
+                    <strong>¡Gracias!</strong> Un voluntario de OpenStreetMap va a agregar tu negocio al mapa próximamente.
                 </p>
                 <p>
-                    Did you know you can add your own data to the map and skip the wait?
-                    It's very easy to get started <a href="http://openstreetmap.org/edit">editing OSM</a>
-                    in your browser.
+                    ¿Sabías que podés agregar esta información vos mismo
+                  en el mapa sin esperar?. Es muy sencillo. <br/ >Podrías
+                  empezar leyendo esta guía: <a href="http://openstreetmap.org/edit">http://learnosm.org/es/</a>
                 </p>
             </div>
         </div>
