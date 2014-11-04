@@ -1,9 +1,10 @@
 var findme_map = L.map('findme-map')
     .setView([37.383333, -5.983333], 12),
-    osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    osmAttrib = 'Map data © OpenStreetMap contributors',
+    osmUrl = 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+    osmAttrib = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>',
     osm = L.tileLayer(osmUrl, {minZoom: 2, maxZoom: 18, attribution: osmAttrib}).addTo(findme_map),
     category_data = [];
+    subcategory_data = [];
 
 var findme_marker = L.marker([0,0], {draggable:true}).addTo(findme_map);
 findme_marker.setOpacity(0);
@@ -18,8 +19,18 @@ $("#category").select2({
     query: function (query) {
         var data = {results: []}, i;
         for (i = 0; i < category_data.length; i++) {
-            if (query.term.length === 0 || category_data[i].toLowerCase().indexOf(query.term.toLowerCase()) >= 0) {
-                data.results.push({id: category_data[i], text: category_data[i]});
+            var children_json = category_data[i].children;
+            var children = [];
+            for(var j=0; j < children_json.length; j++){
+                if (query.term.length === 0 || children_json[j].toLowerCase().indexOf(query.term.toLowerCase()) >= 0) {
+                    children.push({id: children_json[j], text:children_json[j]});
+                }
+            }
+            if(children.length != 0){
+                data.results.push({
+                    text: category_data[i].text,
+                    children: children
+                });
             }
         }
         query.callback(data);

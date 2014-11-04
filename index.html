@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>On OpenStreetMap</title>
+        <title>Tu negocio en OpenStreetMap</title>
         <meta http-equiv='content-type' content='text/html; charset=utf-8' />
         <link href='./img/favicon.ico' rel='icon' type='image/x-icon'/>
         <link rel='stylesheet' type='text/css' href='css/style.css' />
@@ -45,16 +45,16 @@
                 <div class='col12'>
                     <div class='pad1'>
                         <form id='find'>
-                            <input class='col8' id='address' placeholder='501 West Main Street, Alexandria, VA' />
+                            <input class='col8' id='address' placeholder='Calle San Jacinto 10, Sevilla' />
                             <button class='col4' id='findme'>Buscar</button>
                         </form>
                     </div>
                     <br />
                     <br />
                     <div class='col12' id='findme-map'></div>
-                    <!--<p id="couldnt-find" style='display: none;'>
-                        <strong>We couldn't find your address.</strong> Try searching for your street or city without the address.
-                    </p>-->
+                    <p id="couldnt-find" style='display: none;'>
+                        <strong>La dirección introducida no tiene resultados</strong> Intente introducir su provincia o municipio.
+                    </p>
                 </div>
             </div>
 
@@ -63,7 +63,7 @@
                 <div class='col12'>
                     <div class='clearfix col12'>
                         <label for='category'>Categoría</label>
-                        <input id='category' data-placeholder='Pick a category...' class='col10' />
+                        <input id='category' data-placeholder='Escoge una categoría...' class='col10' />
                     </div>
                     <div class='col6'>
                         <label for='name'>Nombre</label>
